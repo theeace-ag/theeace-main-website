@@ -5,7 +5,35 @@
     <meta charset="utf-8">
     
     
-    <script>try{if(localStorage.get("__framer_force_showing_editorbar_since")){const n=document.createElement("link");n.rel = "modulepreload";n.href="https://framer.com/edit/init.mjs";document.head.appendChild(n)}}catch(e){}</script>
+    <!-- Edit functionality removed for security -->
+    <script>
+    // Block any attempts to load the editor
+    window.addEventListener('DOMContentLoaded', function() {
+      // Override localStorage methods to prevent editor activation
+      const originalGetItem = Storage.prototype.getItem;
+      Storage.prototype.getItem = function(key) {
+        if (key && key.includes('framer') && key.includes('edit')) {
+          return null;
+        }
+        return originalGetItem.apply(this, arguments);
+      };
+      
+      // Block any attempts to load the editor script
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.addedNodes) {
+            mutation.addedNodes.forEach(function(node) {
+              if (node.tagName === 'SCRIPT' && node.src && node.src.includes('framer.com/edit')) {
+                node.parentNode.removeChild(node);
+              }
+            });
+          }
+        });
+      });
+      
+      observer.observe(document.head, { childList: true, subtree: true });
+    });
+    </script>
     <!-- Start of headStart -->
     
     <!-- End of headStart -->
