@@ -1,5 +1,5 @@
 
-        import * as Framer from "framer";
+import * as Framer from "framer";
 import * as React from "react";
 import { createPortal } from "react-dom";
 import * as ReactDOM from "react-dom/client";
@@ -29,42 +29,7 @@ import * as ReactDOM from "react-dom/client";
                     locales,
                     preserveQueryParams: undefined,
                     siteCanonicalURL: "https://theeace-ag.framer.website",
-                    EditorBar: 
-            typeof window !== "undefined" ? (() => {
-                const isBot = /bot|-google|google-|yandex|ia_archiver|crawl|spider/iu.test(navigator.userAgent)
-                if (isBot) {
-                    console.log("[Framer Editor Bar] Unavailable because navigator is bot")
-                    return
-                }
-
-                return Framer.lazy(async () => {
-                    const dependencies = {
-                        __version: 2,
-                        framer: {
-                            useCurrentRoute: Framer.useCurrentRoute,
-                            useLocaleInfo: Framer.useLocaleInfo,
-                            useRouter: Framer.useRouter,
-                        },
-                        react: {
-                            createElement: React.createElement,
-                            Fragment: React.Fragment,
-                            memo: React.memo,
-                            useCallback: React.useCallback,
-                            useEffect: React.useEffect,
-                            useRef: React.useRef,
-                            useState: React.useState,
-                        },
-                        "react-dom": { createPortal },
-                    }
-
-                    window.__framer_editorBarDependencies = dependencies
-
-                    const { createEditorBar } = await import("https://framer.com/edit/init.mjs")
-                    return {
-                        default: createEditorBar(),
-                    }
-                })
-            })() : undefined
+                    EditorBar: undefined,
         ,
                     
                 }
