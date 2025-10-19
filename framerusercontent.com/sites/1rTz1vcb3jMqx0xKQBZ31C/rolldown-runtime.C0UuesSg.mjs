@@ -1,0 +1,1 @@
+var e=Object.defineProperty,t=(e,t)=>()=>(e&&(t=e(e=0)),t),n=t=>{let n={};for(var r in t)e(n,r,{get:t[r],enumerable:!0});return n};export{t as __esmMin,n as __export};

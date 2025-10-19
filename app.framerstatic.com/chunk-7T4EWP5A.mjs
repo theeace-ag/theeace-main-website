@@ -1,0 +1,2 @@
+import{_v as R,ib as o,mf as t,nf as r,of as d,pf as i}from"https://app.framerstatic.com/chunk-L7L7BWTW.mjs";var N="routes",u=class extends o("RoutesNode",R){constructor(s){let e={...s,id:N};super(e),this.assign(e)}getRedirects(){return this.children.filter(t)}getProxyRoutes(){return this.children.filter(r)}getRewriteRoutes(){return this.children.filter(d)}getHeaderRoutes(){return this.children.filter(i)}};export{N as a,u as b};
+//# sourceMappingURL=https://app.framerstatic.com/chunk-7T4EWP5A.mjs.map

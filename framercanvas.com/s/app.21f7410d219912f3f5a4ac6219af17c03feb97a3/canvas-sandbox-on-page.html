@@ -1,0 +1,167 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <script type="importmap-shim">
+{
+    "imports": {
+        "framer": "./scripts/framer.esm.js",
+        "framer-motion": "https://app.framerstatic.com/framer-motion-esm-shim.YMFIKWEG.mjs",
+        "react": "./scripts/react.esm.js",
+        "react/jsx-runtime": "./scripts/react-jsx-runtime.esm.js",
+        "react/jsx-dev-runtime": "./scripts/react-jsx-runtime.esm.js",
+        "react-dom": "./scripts/react-dom.esm.js",
+        "react-dom/client": "./scripts/react-dom.esm.js",
+        "react-dom/server": "./scripts/react-dom-server.esm.js"
+    }
+}
+</script>
+
+
+        
+        
+            <script src="scripts/react/react.production.min.js"></script>
+<script src="scripts/react-dom/react-dom.production.min.js"></script>
+<script src="scripts/react-dom/react-dom-server-legacy.browser.production.min.js"></script>
+        
+
+        
+<script>
+    window.__previousRequire__ = window.require
+    window.__previousExports__ = window.exports
+    window.__previousProcess__ = window.process
+
+    window.require = (moduleSpecifier) => {
+        switch (moduleSpecifier) {
+            case "react":
+                return window.React
+            case "object-assign":
+                return Object.assign
+            default:
+                throw new Error("react-jsx-runtime requires unexpected module:" + moduleSpecifier)
+        }
+    }
+
+    window.__REACT_RUNTIME_JSX__ = { Fragment: undefined, jsx: undefined, jsxs: undefined, jsxDEV: undefined }
+    window.exports = {
+        set Fragment(value) { window.__REACT_RUNTIME_JSX__.Fragment = value; },
+        set jsx(value) { window.__REACT_RUNTIME_JSX__.jsx = value; },
+        set jsxs(value) { window.__REACT_RUNTIME_JSX__.jsxs = value; },
+        set jsxDEV(value) {window.__REACT_RUNTIME_JSX__.jsxDEV = value; }
+    }
+</script>
+
+    <script>
+        window.process = { env: { NODE_ENV: "production" } }
+    </script>
+    <script src="./scripts/react/react-jsx-runtime.production.min.js"></script>
+
+<script>
+    // Restore the globals to their prev values.
+    window.require = window.__previousRequire__
+    window.exports = window.__previousExports__
+    window.process = window.__previousProcess__
+</script>
+
+        
+        <link href="https://app.framerstatic.com/canvas-sandbox-on-page.FHOXYIW3.css" rel="stylesheet" />
+
+        
+        <link href="https://app.framerstatic.com/chunk-T3VBPXGO.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-WW7ZRIP2.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-Z44G2RQ4.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-GHX7JDAA.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-L7L7BWTW.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-VXJAAVJQ.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-6C6VSETA.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-KYPY4QS7.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-FYUJQV6J.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-INOXWMPK.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-4AQCMAAQ.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-YYHHSCRK.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-NIDOI5EE.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-AHQIRSXG.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-AGVZOAU6.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-FWMM76SF.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-PNIOO2GU.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-WNSBRACC.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-VL3ZLSFG.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-POQKH4YA.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-65XKJBP2.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-ZQUNXESX.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-PI2QROPJ.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-LH43QRIB.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-YZMKOCQQ.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-R3NZHMAQ.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-AUNF3KWQ.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-2VLGS6Z2.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-ZTJ4G3SJ.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-UYDBOT4S.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-NBGN6U2B.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-7T4EWP5A.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-MVKO2TKJ.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-DXTSFT7O.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-Y4KSD2WZ.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-VHY5GXEM.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-PABHF7FN.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-MUV6SRYM.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-WIMTHTQW.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-LFB3N7NP.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-MMCJFMN5.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-AVDWKDUT.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-ABHKVANM.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-5LBBN5VN.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-LDGUHDRN.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-FEKBOCM3.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-7GSEC7H4.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-RBHWVGUT.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-UKZHYWSM.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-XFC6OVIX.mjs" rel="modulepreload">
+<link href="https://app.framerstatic.com/chunk-XGYAAWSK.mjs" rel="modulepreload">
+    </head>
+
+    <body>
+        <main></main>
+        <script>
+    const defaultFetch = window.fetch
+    window.fetch = function(input, init) {
+        // Can be set via `installShimFetchHook` from `importShim.ts`.
+        const fetchHook = window.esmsFetchHook
+        if (fetchHook) return fetchHook(input, init, defaultFetch)
+        return defaultFetch(input, init)
+    }
+
+    // Init options for es-module-shims: https://github.com/guybedford/es-module-shims#init-options
+    window.esmsInitOptions = {
+        shimMode: true,
+        mapOverrides: true,
+        revokeBlobURLs: true,
+        resolve: function (id, parentUrl, defaultResolve) {
+            // Can be set via `installShimResolveHook` from `importShim.ts`.
+            const resolveHook = window.esmsResolveHook
+            if (resolveHook) return resolveHook(id, parentUrl, defaultResolve)
+            return defaultResolve(id, parentUrl)
+        },
+    }
+
+    // A lot of libraries assume `process.env.NODE_ENV` is present in runtime/buildtime, so we are polyfilling it
+    window.process = {
+        ...window.process,
+        env: {
+            ...window.process?.env,
+            NODE_ENV: "production",
+        },
+    }
+</script>
+
+        
+        <script src="https://app.framerstatic.com/canvas-sandbox-on-page.Y3A64TZ5.mjs" type="module"></script>
+</body>
+</html>
