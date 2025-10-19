@@ -6,6 +6,5 @@
     "enabled": true,
     "silent": false,
     "autoJobCancelation": true
-  },
-  "protection": true
+  }
 }
