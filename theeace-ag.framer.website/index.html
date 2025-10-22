@@ -171,7 +171,59 @@
     // Set up a MutationObserver to re-run if the DOM changes
     const observer = new MutationObserver(replaceText);
     observer.observe(document.body, { childList: true, subtree: true });
+
+    // New code to update Instagram link
+    const allLinks = document.querySelectorAll('a');
+    console.log('Total links found:', allLinks.length);
+    allLinks.forEach((link, index) => {
+      console.log(`Link ${index}: href=${link.href}, textContent=${link.textContent.trim()}`);
+      if (link.href.includes('instagram.com') || link.textContent.trim() === 'IG') {
+        console.log('Found Instagram link:', link);
+        link.href = 'https://www.instagram.com/theeace.online/';
+        console.log('Updated Instagram link to:', link.href);
+      }
+    });
   });
 </script>
-</body>
+<script>
+            window.addEventListener('load', function() {
+                console.log('Script loaded and DOM fully parsed.');
+
+                function updateInstagramLink() {
+                    let links = document.querySelectorAll('a');
+                    console.log('Total links found: ' + links.length);
+
+                    links.forEach((link, index) => {
+                        console.log(`Link ${index + 1}: href=${link.href}, textContent=${link.textContent}`);
+                        if (link.href.includes('instagram.com') || link.textContent.includes('IG')) {
+                            console.log('Found Instagram link:');
+                            console.log(link.outerHTML);
+                            if (link.href !== 'https://www.instagram.com/theeace.online/') {
+                                link.href = 'https://www.instagram.com/theeace.online/';
+                                console.log('Updated Instagram link to: ' + link.href);
+                            } else {
+                                console.log('Instagram link already correct.');
+                            }
+                        }
+                    });
+                }
+
+                // Initial update
+                updateInstagramLink();
+
+                // Set up MutationObserver to re-apply the link if the DOM changes
+                const observer = new MutationObserver(mutations => {
+                    mutations.forEach(mutation => {
+                        if (mutation.type === 'childList' || mutation.type === 'subtree') {
+                            console.log('DOM changed, re-checking Instagram link...');
+                            updateInstagramLink();
+                        }
+                    });
+                });
+
+                // Start observing the document body for changes
+                observer.observe(document.body, { childList: true, subtree: true });
+            });
+        </script>
+    </body>
 </html>
