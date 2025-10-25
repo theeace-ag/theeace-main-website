@@ -4,19 +4,7 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/configurator",
-      "destination": "/configurator.html"
-    },
-    {
-      "source": "/payment",
-      "destination": "/payment.html"
-    },
-    {
-      "source": "/payments",
-      "destination": "/payments.html"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ],
