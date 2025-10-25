@@ -5,18 +5,18 @@
   "rewrites": [
     {
       "source": "/configurator",
-      "destination": "/index.html"
+      "destination": "/configurator.html"
     },
     {
       "source": "/payment",
-      "destination": "/index.html"
+      "destination": "/payment.html"
     },
     {
       "source": "/payments",
-      "destination": "/index.html"
+      "destination": "/payments.html"
     },
     {
-      "source": "/((?!api/).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
