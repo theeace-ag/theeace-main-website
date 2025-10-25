@@ -2,6 +2,12 @@
   "outputDirectory": "theeace-ag.framer.website",
   "trailingSlash": true,
   "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ],
   "github": {
     "enabled": true,
     "silent": false,
