@@ -1,0 +1,13 @@
+/* Hide the "Made in Framer" badge on pricing page */
+a[href*="framer.com/r/badge"],
+a[href*="framer.com"] img,
+a.__framer-badge,
+.framer-n0ccwk,
+a[data-framer-name="Light"],
+[data-nosnippet="true"],
+.framer-1reftc7 {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
